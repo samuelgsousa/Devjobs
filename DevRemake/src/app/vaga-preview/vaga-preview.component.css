@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+h1, h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1rem;
+    margin-bottom: 15px;
+
+
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5%;
+}
+
+.sub-informations{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5%;
+}
+
+.desc-container{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.requisitos{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-info{
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+}
+
+button{
+    background-color: rgb(105, 72, 226);
+    border-color: rgb(105, 72, 226) ;
+}
+
+

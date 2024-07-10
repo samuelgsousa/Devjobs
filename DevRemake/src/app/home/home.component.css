@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(198, 198, 223);
+
+}
+
+.results{
+    max-height: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: row;
+    row-gap: 50px;
+}
+
+#search{
+    width: 95%;
+    height: 15vh;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 50px;
+    padding-left: 45px;
+}
+
+#search-bar{
+    width: 450px; 
+    height: 50px;         
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    border-color: rgb(105, 72, 226);
+    color: rgb(105, 72, 226);
+}
+
+button:hover, button:active{
+    background-color: rgb(105, 72, 226);
+    border-color: rgb(105, 72, 226);
+    color: white;
+}

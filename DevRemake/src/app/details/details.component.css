@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px 0px 0px 0px;
+}
+
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    align-items: center;
+    width: 60rem;
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.title h1{
+    margin-bottom: 0px;
+}
+
+.title h2{
+    font-size: 1rem;
+}
+
+article{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60rem;
+    margin-top: 40px;
+    border-radius: 5px;
+    min-height: 80vh;
+    padding: 25px;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.cabecalho_vaga h2{
+    display: flex;
+}
+
+#data{
+    font-size: 1rem;
+}
+
+
+.cabecalho_vaga{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website a{
+    text-decoration: none;
+    color: var(--MainColor)
+}
+
+body{
+    background-color: rgb(198, 198, 223);
+}
