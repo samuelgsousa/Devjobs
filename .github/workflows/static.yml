@@ -1,43 +1,78 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Workflow para deploy de conteúdo estático no GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Executa nos pushes direcionados para a branch principal
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permite executar este workflow manualmente a partir da aba Actions
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Define permissões do GITHUB_TOKEN para permitir deployment para GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Permite apenas um deployment concorrente
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Job único para deploy
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout do repositório
         uses: actions/checkout@v4
-      - name: Setup Pages
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Navegar para o diretório correto
+        run: cd ../
+
+      - name: Limpar cache do NPM
+        run: npm cache clean --force
+        working-directory: ./
+
+      - name: Remover node_modules e package-lock.json
+        run: rm -rf node_modules package-lock.json
+        working-directory: ./
+
+      - name: Instalar client
+        run: npm install -g @angular/cli
+        working-directory: ./
+
+
+      - name: Instalar dependências
+        run: npm install
+        working-directory: ./DevRemake
+
+      - name: Ajustar permissões para o comando ng
+        run: chmod +x ./node_modules/.bin/ng
+        working-directory: ./DevRemake
+        
+
+      - name: Construir o projeto Angular
+        run: npm run build
+        working-directory: ./DevRemake
+
+      - name: Configurar Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Fazer upload dos artefatos para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
+          path: './DevRemake/dist/'
+
+      - name: Deploy para GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 
