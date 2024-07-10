@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Navegar para o diretório correto
+        run: cd ../
+
       - name: Limpar cache do NPM
         run: npm cache clean --force
 
