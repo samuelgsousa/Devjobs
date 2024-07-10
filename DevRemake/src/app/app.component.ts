@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
     <main>
     <a [routerLink]="['/']">
     <app-header></app-header>
-      </a>
+      </a> 
       <section class="content">
         <router-outlet></router-outlet>
       </section>
