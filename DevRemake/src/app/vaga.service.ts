@@ -9,7 +9,8 @@ import { Vagapreview } from './vagapreview';
 
 export class VagaService {    
 
-    private url = 'https://api.jsonbin.io/v3/b/66900b02acd3cb34a864a1bd';
+    
+    private url = 'https://api.jsonbin.io/v3/b/66900b02acd3cb34a864a1bd/';
     private headers = new HttpHeaders({
         'X-Master-Key': '$2a$10$/3JRupged.ZAUryWzo5eBeXWz2LtN.GgYdrnBMw4lJqWrZqK6ptDq' // Substitua 'YOUR_API_KEY_HERE' pela sua chave de API real
       });
