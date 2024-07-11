@@ -7,7 +7,7 @@ import { Vagapreview } from './vagapreview';
   
 })
 export class VagaService {
-    url = 'https://devjobs-remake.vercel.app/';
+    url = 'http://localhost:3000/locations';
 
 //   protected vagaPreviewList: Vagapreview[] = [
 //     {
