@@ -7,7 +7,7 @@ import { Vagapreview } from './vagapreview';
   
 })
 export class VagaService {
-    url = 'http://localhost:3000/locations';
+    url = 'https://api.jsonbin.io/v3/b/66900b02acd3cb34a864a1bd';
 
 //   protected vagaPreviewList: Vagapreview[] = [
 //     {
