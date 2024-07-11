@@ -47,8 +47,11 @@ export class HomeComponent {
   filteredVagasList: Vagapreview[] = []
 
   constructor(){
-    this.vagaPreviewList = this.vagaService.getAllVagas()
-    this.filteredVagasList = this.vagaPreviewList
+    this.vagaService.getAllVagas().then((vagaPreviewList: Vagapreview[]) =>{
+      this.vagaPreviewList = vagaPreviewList
+      this.filteredVagasList = this.vagaPreviewList
+    })
+
 
   }
 

@@ -64,7 +64,9 @@ export class DetailsComponent {
 
         constructor() {
           const vagaPreviewId = Number(this.route.snapshot.params['id'])
-          this.vagaPreview = this.vagaService.getVagaById(vagaPreviewId)
+          this.vagaService.getVagaById(vagaPreviewId).then(vagaPreview => {
+            this.vagaPreview = vagaPreview
+          })
         }
 
 }
