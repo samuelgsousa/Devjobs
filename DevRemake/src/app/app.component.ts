@@ -15,9 +15,9 @@ import { RouterModule } from '@angular/router';
     <a [routerLink]="['/']">
     <app-header></app-header>
       </a> 
+      
       <section class="content">
         <router-outlet></router-outlet>
-        <app-home></app-home>
       </section>
     </main>
     
