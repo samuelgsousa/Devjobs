@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [HomeComponent, HeaderComponent, RouterModule, RouterLink, RouterLinkActive, RouterOutlet],
   template:`
-
+  <!-- esse é o arquivo que está sendo renderizado no Vercel -->
     <main>
     <a [routerLink]="['/']">
     <app-header></app-header>
