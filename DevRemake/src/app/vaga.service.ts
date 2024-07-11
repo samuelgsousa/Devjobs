@@ -7,7 +7,7 @@ import { Vagapreview } from './vagapreview';
   
 })
 export class VagaService {
-    url = 'https://github.com/samuelgsousa/Devjobs-Remake/blob/main/DevRemake/db.json';
+    url = 'https://devjobs-remake.vercel.app/';
 
 //   protected vagaPreviewList: Vagapreview[] = [
 //     {
