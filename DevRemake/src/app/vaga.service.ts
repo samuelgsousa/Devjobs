@@ -9,7 +9,7 @@ import { Vagapreview } from './vagapreview';
 export class VagaService {
     url = 'http://localhost:3000/locations';
 
-//   protected vagaPreviewList: Vagapreview[] = [
+   protected vagaPreviewList: Vagapreview[] = [
 //     {
 //         "id": 1,
 //         "nome_empresa": "Marketing S&A",
@@ -370,7 +370,7 @@ export class VagaService {
 //                 "requisito": "Experiência em sistemas embarcados"}
 //         ]
 //     }
-// ]
+ ]
 
   async getAllVagas(): Promise<Vagapreview[]>{
     const data = await fetch(this.url)
