@@ -1,19 +1,23 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable } from '@angular/core';
 import { Vagapreview } from './vagapreview';
+
 
 @Injectable({
   providedIn: 'root',
   
 })
 
+
+
 export class VagaService {    
 
+   requestOptions = {                                                                                                                                                            
+    headers: new Headers({ 'X-Master-Key': '$2a$10$/3JRupged.ZAUryWzo5eBeXWz2LtN.GgYdrnBMw4lJqWrZqK6ptDq'}), 
+  };
     
     private url = 'https://api.jsonbin.io/v3/b/66900b02acd3cb34a864a1bd/';
-    private headers = new HttpHeaders({
-        'X-Master-Key': '$2a$10$/3JRupged.ZAUryWzo5eBeXWz2LtN.GgYdrnBMw4lJqWrZqK6ptDq' // Substitua 'YOUR_API_KEY_HERE' pela sua chave de API real
-      });
+    
 
 //   protected vagaPreviewList: Vagapreview[] = [
 //     {
@@ -379,19 +383,23 @@ export class VagaService {
 // ]
 
   async getAllVagas(): Promise<Vagapreview[]>{
-    const data = await fetch(this.url)
+    const data = await fetch(this.url, this.requestOptions)
+    
     return (await data.json()) ?? []
   }
 
   async getVagaById(id: number): Promise<Vagapreview | undefined> {
     const data = await fetch(`${this.url}/${id}`)
-    return (await data.json()) ?? {}
+    console.log(data.json())
+    return (await data.json()) ?? []
   }
 
 
   constructor() {
     
    }
+
+   
 }
 
 // json-server --watch db.json
