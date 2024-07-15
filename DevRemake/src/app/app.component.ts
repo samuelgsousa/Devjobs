@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   template:`
   <!-- esse é o arquivo que está sendo renderizado no Vercel -->
     <main>
-    <a [routerLink]="['/browser/browser']">
+    <a [routerLink]="['/']">
     <app-header></app-header>
       </a> 
       
