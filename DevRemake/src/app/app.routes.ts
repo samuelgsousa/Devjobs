@@ -12,15 +12,5 @@ export const routes: Routes = [
       path: 'details/:id',
       component: DetailsComponent,
       title: 'Vaga details',
-    },    
-     {
-        path: 'browser/browser/index.html/',
-        component: HomeComponent,
-        title: 'Home page',
-      },
-      {
-        path: 'browser/index.html/',
-        component: HomeComponent,
-        title: 'Home page',
-      },
+    },
 ];
