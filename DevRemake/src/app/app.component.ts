@@ -12,7 +12,7 @@ import {APP_BASE_HREF} from '@angular/common';
   selector: 'app-root',
   standalone: true,
   imports: [HomeComponent, HeaderComponent, RouterModule, RouterLink, RouterLinkActive, RouterOutlet],
-  providers: [{provide: APP_BASE_HREF, useValue: '/dist/dev-remake'}],
+  providers: [{provide: APP_BASE_HREF, useValue: '/browser'}],
   template:`
   <!-- esse é o arquivo que está sendo renderizado no Vercel -->
     <main>
