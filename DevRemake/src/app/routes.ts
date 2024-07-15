@@ -1,6 +1,7 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {DetailsComponent} from './details/details.component';
+import { AppComponent } from './app.component';
 
 const routeConfig: Routes = [
     {
@@ -13,5 +14,6 @@ const routeConfig: Routes = [
       component: DetailsComponent,
       title: 'Vaga details',
     },
+    { path: '**', component: AppComponent },
   ];
   export default routeConfig;
