@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href dev-remake/browser",
+    "build": "ng build --base-href dist/dev-remake/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:DevRemake": "node dist/dev-remake/server/server.mjs"
