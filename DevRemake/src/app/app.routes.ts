@@ -13,5 +13,9 @@ export const routes: Routes = [
         path: 'details/:id',
         component: DetailsComponent,
         title: 'Vaga details',
-      }, { path: '**', component: AppComponent },
+      },
+      { path: '**',
+        component: HomeComponent,
+        title: 'Home page'
+       },
 ];

@@ -14,6 +14,9 @@ const routeConfig: Routes = [
       component: DetailsComponent,
       title: 'Vaga details',
     },
-    { path: '**', component: AppComponent },
+    { path: '**',
+      component: HomeComponent,
+      title: 'Home page'
+     },
   ];
   export default routeConfig;
