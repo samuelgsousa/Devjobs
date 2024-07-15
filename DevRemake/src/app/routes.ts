@@ -14,5 +14,15 @@ const routeConfig: Routes = [
       component: DetailsComponent,
       title: 'Vaga details',
     },
+    {
+      path: 'browser/browser/index.html/',
+      component: HomeComponent,
+      title: 'Home page',
+    },
+    {
+      path: 'browser/index.html/',
+      component: HomeComponent,
+      title: 'Home page',
+    },
   ];
   export default routeConfig;

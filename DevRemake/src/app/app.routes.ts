@@ -18,4 +18,9 @@ export const routes: Routes = [
         component: HomeComponent,
         title: 'Home page',
       },
+      {
+        path: 'browser/index.html/',
+        component: HomeComponent,
+        title: 'Home page',
+      },
 ];
