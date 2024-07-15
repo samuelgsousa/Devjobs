@@ -3,16 +3,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
-import {NgModule} from '@angular/core';
-import {APP_BASE_HREF} from '@angular/common';
-
-
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [HomeComponent, HeaderComponent, RouterModule, RouterLink, RouterLinkActive, RouterOutlet],
-  providers: [{provide: APP_BASE_HREF, useValue: '/browser'}],
   template:`
   <!-- esse é o arquivo que está sendo renderizado no Vercel -->
     <main>
