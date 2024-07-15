@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Injectable } from '@angular/core';
 import { Vagapreview } from './vagapreview';
+import { map, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -382,10 +383,11 @@ export class VagaService {
 //     }
 // ]
 
-  async getAllVagas(): Promise<Vagapreview[]>{
-    const data = await fetch(this.url, this.requestOptions)
+  async getAllVagas(): Promise<Observable<Vagapreview[]>>{
+    // const data = await fetch(this.url, this.requestOptions)
     
-    return (await data.json()) ?? []
+    return this.http.get<Vagapreview[]>(this.url).pipe(map((response: any) => response.Vagapreview))
+    // return (await data.json()) ?? []
   }
 
   async getVagaById(id: number): Promise<Vagapreview | undefined> {
@@ -395,7 +397,7 @@ export class VagaService {
   }
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
     
    }
 
