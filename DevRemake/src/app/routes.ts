@@ -1,7 +1,14 @@
-import {Routes} from '@angular/router';
+import {Routes,RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {DetailsComponent} from './details/details.component';
-import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
+import { routes } from './app.routes';
+
+
+NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
 
 const routeConfig: Routes = [
     {
@@ -22,4 +29,6 @@ const routeConfig: Routes = [
   }
     
   ];
+
+  
   export default routeConfig;
