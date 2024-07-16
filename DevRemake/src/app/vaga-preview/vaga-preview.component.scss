@@ -1,0 +1,20 @@
+$colors: #a2b9bc,#6b5b95,#feb236, #d64161, #ff7b25, #b2ad7f,  #878f99;
+
+@function random-color($colors) {
+    $index: random(length($colors));
+    @return nth($colors, $index);
+  }
+
+.avatar {
+    color: #fff; 
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:100%;
+    width:50px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: random-color($colors);
+  }
