@@ -50,7 +50,7 @@ import { VagaService } from '../vaga.service';
     </ul>
 
     <div class="footer-info">
-    <a [routerLink]="['/details', Vagapreview?.id]">Learn More</a>
+    <a [routerLink]="['/details', Vagapreview?.id]">Ver mais</a>
     </div>
 
     <router-outlet></router-outlet>

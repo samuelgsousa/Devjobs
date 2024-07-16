@@ -4,9 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Vagapreview } from '../vagapreview';
 import { VagaPreviewComponent } from '../vaga-preview/vaga-preview.component';
 import { VagaService } from '../vaga.service';
-import {APP_BASE_HREF,  DatePipe, DecimalPipe, HashLocationStrategy, LocationStrategy} from '@angular/common';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+
 
 @Injectable({ providedIn: 'root' })
 
