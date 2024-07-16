@@ -27,7 +27,7 @@ import { VagaService } from '../vaga.service';
   </div>
 
 <div class="card-body">
-<h1 class="listing-heading">{{Vagapreview?.cargo}}</h1>
+<h1 class="listing-heading ">{{Vagapreview?.cargo}}</h1>
     <div class="sub-informations">
 
       <h3>{{Vagapreview?.localidade}}</h3>

@@ -13,6 +13,12 @@ export const routes: Routes = [
       path: 'details/:id',
       component: DetailsComponent,
       title: 'Vaga details',
+    },
+    {
+        path: '**', 
+        redirectTo: '', 
+        pathMatch: 'full'
+
     }
 ];
 
