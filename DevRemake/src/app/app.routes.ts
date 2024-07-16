@@ -1,6 +1,7 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
      {
@@ -13,8 +14,15 @@ export const routes: Routes = [
       component: DetailsComponent,
       title: 'Vaga details',
     },
-    {path: '**', 
-        redirectTo: '', pathMatch: 'full'
+    {
+        path: '**', 
+        redirectTo: '', 
+        pathMatch: 'full'
 
     }
 ];
+
+NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
