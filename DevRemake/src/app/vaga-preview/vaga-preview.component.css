@@ -60,5 +60,10 @@ button{
     color: white;
 }
 
+button:hover{
+    background-color: #e73c7e;
+    color: white;
+}
+
 
 

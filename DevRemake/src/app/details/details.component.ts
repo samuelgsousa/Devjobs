@@ -16,12 +16,14 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, NgbToastModule, VagaPreviewComponent], 
   template:`
+  <link rel="stylesheet" href="details.component.scss">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   
   <body class="bg-teaser">
     
                <div class="title">
-                 <img src="https://via.placeholder.com/120" alt="" />
+               <div class="avatar"> {{getInitials("" + vagaPreview?.nome_empresa)}}</div>
+                 <!-- <img src="https://via.placeholder.com/120" alt="" /> -->
                  <div className="website">
                      <h1>{{vagaPreview?.nome_empresa}}</h1>
                      <h2> <a href="https://portifolio-seven-wine.vercel.app/content/index.html" target='_blank'>{{vagaPreview?.nome_empresa}}.com</a> </h2>
@@ -59,6 +61,10 @@ export class DetailsComponent {
 
     getReq = (reqList: any): string[] => {
       return (reqList?.map((req: { requisito: any; }) => req.requisito))
+        }
+
+    getInitials(firstName:string) {
+        return firstName[0].toUpperCase();
         }
 
         constructor() {
