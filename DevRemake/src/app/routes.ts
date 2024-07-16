@@ -14,6 +14,12 @@ const routeConfig: Routes = [
       component: DetailsComponent,
       title: 'Vaga details',
     },
+    {
+      path: '**', 
+      redirectTo: '', 
+      pathMatch: 'full'
+
+  }
     
   ];
   export default routeConfig;
