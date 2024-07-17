@@ -44,3 +44,16 @@ button:hover, button:active{
     border-color: rgb(105, 72, 226);
     color: white;
 }
+
+@media(max-width: 600px){
+    #search{
+        width: 90%;
+
+    }
+
+    #search-bar{
+        width: 80%;
+    }
+
+
+}

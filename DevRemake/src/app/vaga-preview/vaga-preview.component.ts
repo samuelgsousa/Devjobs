@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { Vagapreview } from '../vagapreview';
 import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
-import { VagaService } from '../vaga.service';
-
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +19,7 @@ import { VagaService } from '../vaga.service';
 
   <section class="listing">
   
-  <div class="card mb-3" style="width: 30rem; height: 33rem;">
+  <div class="card mb-3">
   <div class="card-header bg-transparent ">
 
   <div class="avatar"> {{getInitials("" + Vagapreview?.nome_empresa)}}</div>

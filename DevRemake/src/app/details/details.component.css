@@ -17,6 +17,7 @@
     height: 120px;
 }
 
+
 .title h1{
     margin-bottom: 0px;
 }
@@ -62,4 +63,16 @@ article{
 
 body{
     background-color: rgb(198, 198, 223);
+}
+
+@media(max-width: 1000px){
+    .title{
+        width: 90%;
+        gap: 10%;
+    }
+
+    article{
+        width: 90%;
+
+    }
 }
